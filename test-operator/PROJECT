@@ -1,0 +1,19 @@
+domain: sourcecd.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: test-operator
+repo: github.com/sourcecd/operators/test-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: sourcecd.com
+  group: apps
+  kind: HelloApp
+  path: github.com/sourcecd/operators/test-operator/api/v1
+  version: v1
+version: "3"

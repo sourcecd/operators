@@ -1,0 +1,12 @@
+apiVersion: apps.sourcecd.com/v1
+kind: HelloApp
+metadata:
+  labels:
+    app.kubernetes.io/name: helloapp
+    app.kubernetes.io/instance: helloapp-sample
+    app.kubernetes.io/part-of: test-operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: test-operator
+  name: helloapp-sample
+spec:
+  # TODO(user): Add fields here
