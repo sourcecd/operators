@@ -1,0 +1,21 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-operator-deployment
+  namespace: test-operator-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: test-operator-controller
+  template:
+    metadata:
+      labels:
+        app: test-operator-controller
+    spec:
+      containers:
+        - name: test-operator-controller
+          image: docker.io/wintchester/sourcecd-test-operator:latest
+          imagePullPolicy: Always
+      serviceAccountName: test-operator-svc

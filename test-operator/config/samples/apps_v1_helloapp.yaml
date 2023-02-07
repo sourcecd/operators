@@ -9,4 +9,5 @@ metadata:
     app.kubernetes.io/created-by: test-operator
   name: helloapp-sample
 spec:
-  # TODO(user): Add fields here
+  image: kicbase/echo-server:1.0
+  size: 3
